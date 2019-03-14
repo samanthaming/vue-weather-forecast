@@ -21,7 +21,7 @@ new Vue({
   methods: {
     fetchWeather() {
       axios
-        .get(`http://api.openweathermap.org/data/2.5/forecast?APPID=${API_KEY}&q=${this.city},ca&units=metric`)
+        .get(`https://api.openweathermap.org/data/2.5/forecast?APPID=${API_KEY}&q=${this.city},ca&units=metric`)
         .then(response => {
           this.weathers = response.data.list.filter(weather => {
             return weather["dt_txt"].includes(PREFERRED_TIME);
