@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Basic" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <title>Weather Challenge | Samantha Ming</title>
+</head>
+<body>
+
+  <!-- app -->
+  <div id="app">
+    <div class="outer-container">
+      <h1 class="title">5 Day Forecast</h1>
+
+      <div class="form">
+        <input
+          v-model="city"
+          placeholder="Enter a Canadian City"
+          v-on:keyup.enter="submit"
+        >
+        <small>Please enter a Canadian City</small>
+      </div>
+
+      <div class="weather-list">
+        <div class="weather-card" v-for="weather in weathers" :key="weather.dt">
+          <div class="weather-day">
+            {{ getDayName(weather.dt) }}
+          </div>
+          <div class="weather-icon">
+            <img
+              :src="`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`"
+              alt=""
+            >
+          </div>
+          <div class="weather-degree">
+            {{ formatTemperature(weather.main.temp) }}&deg;
+          </div>
+          <div class="weather-description">
+            {{ weather.weather[0].description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="vue.js"></script>
+</body>
+</html>

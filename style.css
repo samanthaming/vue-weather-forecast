@@ -1,0 +1,84 @@
+/* ==================
+ *  VARIABLES
+ * ================== */
+:root {
+  --black: hsl(0, 0%, 7%);
+  --pink: #FF8B94;
+  --light-pink: #FFAAA5;
+  --green: #A8E6CF;
+  --light-green: #DCEDC1;
+  --gray: #aaa;
+}
+/* ==================
+ *  BASE
+ * ================== */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Basic', sans-serif;
+  color: var(--black);
+  font-size: 1.6rem;
+}
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--light-green);
+}
+/* ==================
+ *  APP
+ * ================== */
+.title {
+  font-size: 8rem;
+  text-align: center;
+  color:  var(--light-pink);
+  text-shadow: 3px 3px var(--green);
+  margin-top: 3%;
+}
+.weather-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+.weather-card {
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: var(--pink);
+  color: white;
+}
+.weather-degree {
+  font-size: 5rem;
+}
+.form {
+  text-align: center;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form input {
+  padding: .5em .6em;
+  display: block;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+}
+.form small {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-top: 0.5%;
+}
