@@ -15,4 +15,4 @@ Use the OpenWeatherMap 5 day weather forecast API to retrieve and display the cu
 
 **See Live Version**
 
-https://samanthaming.github.io/vue-weather-forecast/ 
+https://suspicious-visvesvaraya-877e6a.netlify.com/
