@@ -1,6 +1,7 @@
 # Weather Web App Challenge
 
 **Task**
+
 Use the OpenWeatherMap 5 day weather forecast API to retrieve and display the current 5-day weather forecast for a city (ex. Vancouver): http://openweathermap.org/forecast5
 
 **Feature**
@@ -11,3 +12,7 @@ Use the OpenWeatherMap 5 day weather forecast API to retrieve and display the cu
 **Future Improvement**
 - Expand to include other countries
 - Make weather card background color dynamic to reflect the weather
+
+**See Live Version**
+
+https://samanthaming.github.io/vue-weather-forecast/ 
